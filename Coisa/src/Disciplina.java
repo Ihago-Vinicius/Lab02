@@ -3,6 +3,8 @@ import java.util.Arrays;
 /**
  * Representa uma Disciplina academica.
  * Gerencia informações sobre a disciplina, como cadastrar horas e notas.
+ *
+ * @author Ihago Vincius
  */
 public class Disciplina {
     /** Nome da disciplina. */

@@ -1,6 +1,8 @@
 /**
  *  Representação do tempo investido no estudo de uma disciplina por um aluno.
  *  Gerencia informações como o tempo de estudo esperado para a disciplina.
+ *
+ * @author Ihago Vinicius
  */
 public class RegistroTempoOnline {
     /** nome da disciplina */

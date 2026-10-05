@@ -1,6 +1,8 @@
 /**
  * Representa um registo de reumos do aluno.
  * Manipula informações como quantidade de resumos e os próprios resumos.
+ *
+ * @author Ihago Vinicius
  */
 public class RegistroResumos {
     /** array composto pelos resumos cadastrados */
