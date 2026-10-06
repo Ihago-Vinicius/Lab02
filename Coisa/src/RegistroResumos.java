@@ -21,8 +21,6 @@ public class RegistroResumos {
     public RegistroResumos(int numeroDeResumos) {
         this.resumos = new String[numeroDeResumos];
         this.resumosTemas = new String[numeroDeResumos];
-        this.indice = 0;
-        this.contaResumos = 0;
     }
 
     /**
@@ -32,17 +30,19 @@ public class RegistroResumos {
      * @param conteudo conteudo do resumo.
      */
     public void adiciona(String tema, String conteudo) {
-        if (indice < resumosTemas.length) {
-            this.resumosTemas[indice] = tema;
-            this.resumos[indice] = tema + ": " + conteudo;
-            indice++;
-        } else {
-            this.indice = 0;
-            this.resumosTemas[indice] = tema;
-            this.resumos[indice] = tema + ": " + conteudo;
-        }
-        if (contaResumos < resumosTemas.length) {
-            contaResumos++;
+        if (!temResumo(tema)) {
+            if (indice < resumosTemas.length) {
+                this.resumosTemas[indice] = tema;
+                this.resumos[indice] = tema + ": " + conteudo;
+                indice++;
+            } else {
+                this.indice = 0;
+                this.resumosTemas[indice] = tema;
+                this.resumos[indice] = tema + ": " + conteudo;
+            }
+            if (contaResumos < resumosTemas.length) {
+                contaResumos++;
+            }
         }
     }
 
