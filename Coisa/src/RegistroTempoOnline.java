@@ -53,6 +53,7 @@ public class RegistroTempoOnline {
      * Rrepresentação textual da classe.
      * @return nome da disciplina, o tempo investido e o tempo esperado.
      */
+    @Override
     public String toString() {
         return nomeDaDisciplina + " " + tempoInvestidoOnline + "/" + tempoEsperado;
     }

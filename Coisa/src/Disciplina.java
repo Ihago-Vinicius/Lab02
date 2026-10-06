@@ -53,6 +53,7 @@ public class Disciplina {
      * Representação textual da disciplina.
      * @return nome, quantidade de horas de estudo, media e notas do aluno.
      */
+    @Override
     public String toString() {
         return nomeDaDisciplina + " " + horasDeEstudo + " " + (notas[0] + notas[1] + notas[2] + notas[3]) / 4 +  " " + Arrays.toString(notas);
     }
