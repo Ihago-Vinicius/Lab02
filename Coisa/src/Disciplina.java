@@ -24,6 +24,17 @@ public class Disciplina {
         this.notas = new double[4];
     }
 
+    /**
+     * Método construtor da classe. Passa a quantidade de notas também.
+     * @param nomeDaDisciplina
+     * @param notas
+     */
+    public Disciplina(String nomeDaDisciplina, int notas) {
+        this.horasDeEstudo = 0;
+        this.nomeDaDisciplina = nomeDaDisciplina;
+        this.notas = new double[notas];
+    }
+
     /***
      * Cadastra o número de horas daquela disciplina .
      * @param horas quantidade de horas.
