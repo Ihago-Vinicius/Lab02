@@ -17,7 +17,7 @@ public class Disciplina {
     private final int[] pesos;
 
     /**
-     * Método construtor da classe.
+     * Método básico construtor da classe.
      * @param nomeDisciplina nome da disciplina.
      */
     public Disciplina(String nomeDisciplina) {
@@ -71,12 +71,22 @@ public class Disciplina {
         this.notas[nota - 1] = valorNota;
     }
 
+    public double media() {
+        double totalNotas = 0;
+        double somaPesos = 0;
+        for (int i = 0; i < notas.length; i++) {
+            totalNotas += notas[i] * pesos[i];
+            somaPesos += pesos[i];
+        }
+        return totalNotas / somaPesos;
+    }
+
     /**
      * Verifica se o aluno está aprovado.
      * @return true se a média do aluno for maior ou igual a 7, ou false se a média do aluno for menor que 7.
      */
     public boolean aprovado() {
-        return (notas[0] + notas[1] + notas[2] + notas[3]) / 4 >= 7;
+        return media() >= 7;
     }
 
     /**
@@ -85,6 +95,6 @@ public class Disciplina {
      */
     @Override
     public String toString() {
-        return nomeDaDisciplina + " " + horasDeEstudo + " " + (notas[0] + notas[1] + notas[2] + notas[3]) / 4 +  " " + Arrays.toString(notas);
+        return nomeDaDisciplina + " " + horasDeEstudo + " " + media() +  " " + Arrays.toString(notas);
     }
 }
