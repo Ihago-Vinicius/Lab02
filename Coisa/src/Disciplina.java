@@ -13,6 +13,8 @@ public class Disciplina {
     private int horasDeEstudo;
     /** Notas tiradas pelo aluno. */
     private final double[] notas;
+    /** Pesos de cada nota */
+    private final int[] pesos;
 
     /**
      * Método construtor da classe.
@@ -22,20 +24,37 @@ public class Disciplina {
         this.horasDeEstudo = 0;
         this.nomeDaDisciplina = nomeDisciplina;
         this.notas = new double[4];
+        this.pesos = new int[4];
+        Arrays.fill(this.pesos, 1);
     }
 
     /**
      * Método construtor da classe. Passa a quantidade de notas também.
-     * @param nomeDaDisciplina
-     * @param notas
+     * @param nomeDaDisciplina nome da disciplina.
+     * @param quantidadeNotas quantidade de notas.
      */
-    public Disciplina(String nomeDaDisciplina, int notas) {
+    public Disciplina(String nomeDaDisciplina, int quantidadeNotas) {
         this.horasDeEstudo = 0;
         this.nomeDaDisciplina = nomeDaDisciplina;
-        this.notas = new double[notas];
+        this.notas = new double[quantidadeNotas];
+        this.pesos = new int[quantidadeNotas];
+        Arrays.fill(this.pesos, 1);
     }
 
-    /***
+    /**
+     * Método construtor da classe. Passa a quantidade de notas e o peso de cada uma delas.
+     * @param nomeDaDisciplina nome da disciplina.
+     * @param quantidadeNotas quantidade de notas.
+     * @param pesos pesos de cada nota.
+     */
+    public Disciplina(String nomeDaDisciplina, int quantidadeNotas, int[] pesos) {
+        this.horasDeEstudo = 0;
+        this.nomeDaDisciplina = nomeDaDisciplina;
+        this.notas = new double[quantidadeNotas];
+        this.pesos = pesos;
+    }
+
+    /**
      * Cadastra o número de horas daquela disciplina .
      * @param horas quantidade de horas.
      */

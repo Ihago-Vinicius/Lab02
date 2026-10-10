@@ -1,4 +1,7 @@
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
+
 /**
  * Representa um registo de reumos do aluno.
  * Manipula informações como quantidade de resumos e os próprios resumos.
@@ -58,9 +61,7 @@ public class RegistroResumos {
     public String[] pegaResumos() {
         String[] res = new String[contaResumos];
         for (int i = 0; i < contaResumos; i++) {
-            String saida = "";
-            saida += resumos[i].getTema() + ": " + resumos[i].getConteudo();
-            res[i] = saida;
+            res[i] = resumos[i].toString();
         }
         return res;
     }
@@ -109,22 +110,19 @@ public class RegistroResumos {
     }
 
     /**
-     * Faz uma busca nos conteúdos com chave passada pelo usuário.
+     * Faz uma busca nos conteúdos com a chave passada pelo usuário.
+     *
      * @param chave o que deve ser buscado.
-     * @return temas que foram encontrados ocorrências.
+     * @return temas que foram encontrados ocorrências, organizados em ordem alfabética.
      */
-    public String[] busca(String chave) {
-        int ind = 0;
-        String[] resultado = new String[contaResumos];
+    public List<String> busca(String chave) {
+        List<String> resultado = new ArrayList<>();
         for (int i = 0; i < contaResumos; i++) {
             if (resumos[i].getConteudo().contains(chave.toLowerCase())) {
-                resultado[ind] = resumos[i].getTema();
-                ind++;
+                resultado.add(resumos[i].getTema());
             }
         }
-        String[] resultadosSemNull = new String[ind];
-        System.arraycopy(resultado, 0, resultadosSemNull, 0, ind);
-        Arrays.sort(resultadosSemNull);
-        return resultadosSemNull;
+        resultado.sort(null);
+        return resultado;
     }
 }

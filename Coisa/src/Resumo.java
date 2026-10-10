@@ -34,4 +34,13 @@ public class Resumo {
     public String getConteudo() {
         return conteudo;
     }
+
+    /**
+     * Representação textual do resumo.
+     * @return tema + conteudo do resumo
+     */
+    @Override
+    public String toString() {
+        return tema + ": " + conteudo;
+    }
 }
