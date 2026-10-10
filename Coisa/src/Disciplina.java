@@ -56,10 +56,10 @@ public class Disciplina {
 
     /**
      * Cadastra o número de horas daquela disciplina .
-     * @param horas quantidade de horas.
+     * @param quantidadeHoras quantidade de horas.
      */
-    public void cadastraHoras(int horas) {
-        this.horasDeEstudo = horas;
+    public void cadastraHoras(int quantidadeHoras) {
+        this.horasDeEstudo = quantidadeHoras;
     }
 
     /**

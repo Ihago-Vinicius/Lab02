@@ -1,4 +1,4 @@
-/**
+ /**
  * Representa a rotina de descanso do aluno.
  * Gerencia informações sobre o descanso, como horas de descanso.
  *
@@ -32,7 +32,7 @@ public class Descanso {
      * Define o numero de semanas.
      * @param valor quantidade de semanas.
      */
-    public void defineNumeroSemanas(int valor) {
+        public void defineNumeroSemanas(int valor) {
         this.numerosSemanas = valor;
     }
 

@@ -35,10 +35,10 @@ public class RegistroTempoOnline {
 
     /**
      * Adiciona tempo investido online.
-     * @param tempo quantidade de tempo a ser adicionada.
+     * @param quantidadeDeTempo quantidade de tempo a ser adicionada.
      */
-    public void adicionaTempoOnline(int tempo) {
-        this.tempoInvestidoOnline += tempo;
+    public void adicionaTempoOnline(int quantidadeDeTempo) {
+        this.tempoInvestidoOnline += quantidadeDeTempo;
     }
 
     /**

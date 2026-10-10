@@ -9,17 +9,11 @@ import java.util.List;
  * @author Ihago Vinicius
  */
 public class RegistroResumos {
-    /**
-     * array composto pelos resumos cadastrados
-     */
+    /** array composto pelos resumos cadastrados */
     private final Resumo[] resumos;
-    /**
-     * indice que acompanha o local que se deve adicionar o resumo.
-     */
+    /** indice que acompanha o local que se deve adicionar o resumo. */
     private int indice;
-    /**
-     * índide que acompanha quantos resumos foram adicionados.
-     */
+    /** índide que acompanha quantos resumos foram adicionados. */
     private int contaResumos;
 
     /**
