@@ -28,7 +28,7 @@ public class Resumo {
     }
 
     /**
-     * Pega o conteúdo do Resymo e devolve para o usuário.
+     * Pega o conteúdo do Resumo e devolve para o usuário.
      * @return conteúdo de resumo.
      */
     public String getConteudo() {
