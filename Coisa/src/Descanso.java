@@ -22,18 +22,25 @@ public class Descanso {
 
     /**
      * Define horas de descanso.
+     * O valor passado pelo usuário só vai ser alterado no progama se for maior ou igual a 0, pois não existe
+     * quantidade negativa de horas.
      * @param valor quantidade de horas de descanso.
      */
     public void defineHorasDescanso(int valor) {
-        this.horasDeDescanso = valor;
+        if (valor >= 0) {
+            this.horasDeDescanso = valor;
+        }
     }
 
     /**
      * Define o numero de semanas.
+     * Número de semanas tem que ser maior ou igual a 1 para evitar erro de divisão por 0.
      * @param valor quantidade de semanas.
      */
-        public void defineNumeroSemanas(int valor) {
-        this.numerosSemanas = valor;
+    public void defineNumeroSemanas(int valor) {
+        if (valor >= 1) {
+            this.numerosSemanas = valor;
+        }
     }
 
     /**
