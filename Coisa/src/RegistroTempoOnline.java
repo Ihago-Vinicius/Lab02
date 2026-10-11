@@ -7,14 +7,14 @@
 public class RegistroTempoOnline {
     /** nome da disciplina */
     private final String nomeDaDisciplina;
-    /** tempo investido online de estudos sobre essa disciplina do aluno */
+    /** Tempo investido online de estudos sobre essa disciplina do aluno */
     private int tempoInvestidoOnline;
-    /** tempo esperado de estudos sobre essa disciplina. */
+    /** Tempo esperado de estudos sobre essa disciplina. */
     private final int tempoEsperado;
 
     /**
-     * Método construtor da classe.
-     * Nesse método construtor não precisa passsar o tempo investido esperado, ele já vem padrão.
+     * Método construtor da classe, a quantidade de tempo investido esperado já vem padrão.
+     *
      * @param nomeDisciplina nome da disciplina.
      */
     public RegistroTempoOnline(String nomeDisciplina) {
@@ -23,8 +23,8 @@ public class RegistroTempoOnline {
     }
 
     /**
-     * Método construtor da classe.
-     * Nesse método construtor precisa passar o tempo investido esperado.
+     * Método construtor da classe, usuário passa a quantidade de tempo online esperado.
+     *
      * @param nomeDisciplina nome da disciplina
      * @param tempoOnlineEsperado tempo investido esperado de estudos
      */
@@ -35,6 +35,7 @@ public class RegistroTempoOnline {
 
     /**
      * Adiciona tempo investido online.
+     *
      * @param quantidadeDeTempo quantidade de tempo a ser adicionada.
      */
     public void adicionaTempoOnline(int quantidadeDeTempo) {
@@ -43,6 +44,7 @@ public class RegistroTempoOnline {
 
     /**
      * Verifica se atingiu o temmpo investido esperado para a disciplina.
+     *
      * @return true se conseguiu atingir o tempo investido esperado, ou false se não conseguiu.
      */
     public boolean atingiuMetaTempoOnline() {
@@ -51,6 +53,7 @@ public class RegistroTempoOnline {
 
     /**
      * Rrepresentação textual da classe.
+     *
      * @return nome da disciplina, o tempo investido e o tempo esperado.
      */
     @Override

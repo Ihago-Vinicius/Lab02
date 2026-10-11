@@ -18,6 +18,7 @@ public class Disciplina {
 
     /**
      * Método básico construtor da classe.
+     *
      * @param nomeDisciplina nome da disciplina.
      */
     public Disciplina(String nomeDisciplina) {
@@ -30,6 +31,7 @@ public class Disciplina {
 
     /**
      * Método construtor da classe. Passa a quantidade de notas também.
+     *
      * @param nomeDaDisciplina nome da disciplina.
      * @param quantidadeNotas quantidade de notas.
      */
@@ -43,27 +45,34 @@ public class Disciplina {
 
     /**
      * Método construtor da classe. Passa a quantidade de notas e o peso de cada uma delas.
+     * Caso o array de pessos passados não contenha o peso de todas as notas, o programa subentende que
+     * deve ser preenchido com peso 1.
+     *
      * @param nomeDaDisciplina nome da disciplina.
      * @param quantidadeNotas quantidade de notas.
-     * @param pesos pesos de cada nota.
+     * @param arrayDePesos pesos de cada nota.
      */
-    public Disciplina(String nomeDaDisciplina, int quantidadeNotas, int[] pesos) {
+    public Disciplina(String nomeDaDisciplina, int quantidadeNotas, int[] arrayDePesos) {
         this.horasDeEstudo = 0;
         this.nomeDaDisciplina = nomeDaDisciplina;
         this.notas = new double[quantidadeNotas];
-        this.pesos = pesos;
+        this.pesos = new int[quantidadeNotas];
+        Arrays.fill(this.pesos, 1);
+        System.arraycopy(arrayDePesos, 0, pesos, 0, arrayDePesos.length);
     }
 
     /**
-     * Cadastra o número de horas daquela disciplina .
+     * Cadastra o número de horas daquela disciplina.
+     *
      * @param quantidadeHoras quantidade de horas.
      */
     public void cadastraHoras(int quantidadeHoras) {
-        this.horasDeEstudo = quantidadeHoras;
+            this.horasDeEstudo = quantidadeHoras;
     }
 
     /**
      * Cadastra 1 nota daquela disciplina.
+     *
      * @param nota qual nota que deve ser cadastrada.
      * @param valorNota valor da nota que deve ser cadastrada.
      */
@@ -71,6 +80,11 @@ public class Disciplina {
         this.notas[nota - 1] = valorNota;
     }
 
+    /**
+     * Calcula a média do aluno naquela disciplina.
+     *
+     * @return média do aluno.
+     */
     public double media() {
         double totalNotas = 0;
         double somaPesos = 0;
@@ -83,6 +97,7 @@ public class Disciplina {
 
     /**
      * Verifica se o aluno está aprovado.
+     *
      * @return true se a média do aluno for maior ou igual a 7, ou false se a média do aluno for menor que 7.
      */
     public boolean aprovado() {
@@ -91,6 +106,7 @@ public class Disciplina {
 
     /**
      * Representação textual da disciplina.
+     *
      * @return nome, quantidade de horas de estudo, media e notas do aluno.
      */
     @Override

@@ -8,11 +8,11 @@ import java.util.List;
  * @author Ihago Vinicius
  */
 public class RegistroResumos {
-    /** array composto pelos resumos cadastrados */
+    /** Array composto pelos resumos cadastrados */
     private final Resumo[] resumos;
-    /** indice que acompanha o local que se deve adicionar o resumo. */
+    /** Indice que acompanha o local que se deve adicionar o resumo. */
     private int indice;
-    /** índide que acompanha quantos resumos foram adicionados. */
+    /** Índide que acompanha quantos resumos foram adicionados. */
     private int contaResumos;
 
     /**
@@ -26,9 +26,9 @@ public class RegistroResumos {
 
     /**
      * Adiciona um resumo ao array resumos.
-     * Caso o array já esteja cheio substitui o primeiro  continua a partir dai.
+     * Caso o array já esteja cheio substitui-se o primeiro e continua a substituir o próximo dai.
      *
-     * @param tema     tema do resumo.
+     * @param tema tema do resumo.
      * @param conteudo conteudo do resumo.
      */
     public void adiciona(String tema, String conteudo) {
@@ -106,7 +106,7 @@ public class RegistroResumos {
      * Faz uma busca nos conteúdos com a chave passada pelo usuário.
      *
      * @param chave o que deve ser buscado.
-     * @return temas que foram encontrados ocorrências, organizados em ordem alfabética.
+     * @return temas que foram encontradas ocorrências, organizados em ordem alfabética.
      */
     public List<String> busca(String chave) {
         List<String> resultado = new ArrayList<>();

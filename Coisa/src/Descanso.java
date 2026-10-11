@@ -4,16 +4,15 @@
  *
  * @author Ihago Vincius
  */
-
 public class Descanso {
-
-    /** Hroas destinadas ao descanso. */
+    /** Horas destinadas ao descanso. */
     private int horasDeDescanso;
-    /** Quantidade de semanas nas quais dividem as horas. */
+    /** Quantidade de semanas nas quais se dividem as horas. */
     private int numerosSemanas;
 
     /**
      * Método construtor da classe.
+     * Semanas começam em 1 para evitar erro de divisão por 0.
      */
     public Descanso() {
         this.horasDeDescanso = 0;
@@ -22,30 +21,26 @@ public class Descanso {
 
     /**
      * Define horas de descanso.
-     * O valor passado pelo usuário só vai ser alterado no progama se for maior ou igual a 0, pois não existe
-     * quantidade negativa de horas.
+     *
      * @param valor quantidade de horas de descanso.
      */
     public void defineHorasDescanso(int valor) {
-        if (valor >= 0) {
-            this.horasDeDescanso = valor;
-        }
+        this.horasDeDescanso = valor;
     }
 
     /**
-     * Define o numero de semanas.
-     * Número de semanas tem que ser maior ou igual a 1 para evitar erro de divisão por 0.
+     * Define o número de semanas.
+     *
      * @param valor quantidade de semanas.
      */
     public void defineNumeroSemanas(int valor) {
-        if (valor >= 1) {
             this.numerosSemanas = valor;
-        }
     }
 
     /**
      * Retorna o status de descanso do aluno.
-     * @return 'cansado' se o aluno tiver descansado menos de 26 horas por semnana, ou 'descansado' se tiver descansado 26 horas ou mais..
+     * @return 'cansado' se o aluno tiver descansado menos de 26 horas por semana,
+     * ou 'descansado' se tiver descansado 26 horas ou mais.
      */
     public String getStatusGeral() {
         if (horasDeDescanso / numerosSemanas < 26) {
